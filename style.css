@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background:hsl(240, 73%, 65%);
+  margin: 0;
+  scroll-snap-type: none;
+}
+.container{
+  width: 900px;
+  height: 500px;
+  background:#f8f5f6;
+  border-radius: 20px;
+  /* overflow:hidden; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image{
+  width: 400px;
+  transform: translate(-30%, -10%);
+}
+ article{
+  width: 90%;
+  display: none;
+  z-index: 99;
+  transform: translateY(40%);
+}
+.image .woman{
+  width: 110%;
+  transform: translateY(-25%);
+  
+}
+.image .pattern{
+  transform: translate(-27%,60%);
+  width: 150%;
+  color: hsl(240, 73%, 65%);
+  
+}
+.image .box{
+  width: 50%;
+  transform: translate(-30%, -160%);
+  z-index: 99;
+}
+.faq_container{
+  width: 350px;
+  height: 410px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.faq_container h1{
+  margin-bottom: 20px;
+
+}
+.faq_container p{
+  font-size: 12px;
+  font-weight: 400;
+}
+.faq_container h2{
+  font-size: 15px;
+  margin-bottom: 7px;
+  font-weight: 400;
+  transition: 1.4s font-weight ease;
+  transition: 0.5s color ease;
+}
+.question{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease ;
+}
+.faq{
+  margin-top: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid  hsl(240, 73%, 65%);
+  color: hsl(238, 29%, 16%);
+  cursor: pointer;
+}
+.faq img{
+  transition: all 1.4s ;
+  color: hsl(14, 88%, 65%);
+}
+.faq.active .answer {
+  max-height: 55px;
+}
+.faq.active img{
+  transform: rotate(180deg);
+}
+.faq.active h2{
+  font-weight: 700;
+}
+.faq_container h2:hover{
+  color: hsl(14, 88%, 65%);
+}
+@media screen and (max-width:375px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    height: 600px;
+  }
+  .image{
+    display: none;
+  }
+  article{
+    display: block;
+    transform: translateY(-30%);
+    height: auto;
+  }
+  article .pattern{
+    transform: translateY(-60%);
+  }
+  .faq_container{
+    width: 280px;
+    transform: translateY(-50%);
+    z-index: 99;
+    
+  }
+  h1{
+    text-align: center;
+  }
+  
+}

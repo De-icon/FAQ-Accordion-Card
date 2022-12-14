@@ -91,13 +91,13 @@ body{
   transition: all 1.4s ;
   color: hsl(14, 88%, 65%);
 }
-.faq.active .answer {
+.faq.add .answer {
   max-height: 55px;
 }
-.faq.active img{
+.faq.add img{
   transform: rotate(180deg);
 }
-.faq.active h2{
+.faq.add h2{
   font-weight: 700;
 }
 .faq_container h2:hover{
